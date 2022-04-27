@@ -32,6 +32,3 @@ Contributions, issues, and feature requests are welcome!
 ## Show your support
 Give a :star:️ if you like this project!
 ## Acknowledgments
-
-Math magicians app
-Web site created using create-react-app
