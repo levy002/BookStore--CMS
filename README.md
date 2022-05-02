@@ -3,6 +3,7 @@
 
 # Built with
 - React.js
+- Redux
 - CSS
 
 ## Live Demo
