@@ -1,14 +1,14 @@
 const STATUS = 'STATUS';
-const initialState = [];
+const initialState = '';
 
-export const statusCheckingAction = () => ({ type: STATUS });
+export const statusCheck = () => ({ type: STATUS });
 
-const statusReducer = (state = initialState, action) => {
+const statusReducer = (status = initialState, action) => {
   if (action.type === STATUS) {
     return 'Under construction';
   }
 
-  return state;
+  return status;
 };
 
 export default statusReducer;

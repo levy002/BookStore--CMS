@@ -1,47 +1,30 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import Book from '../../book/Book';
 import Form from '../../form/Form';
 
 const BookList = () => {
-  const Books = [
-    {
-      title: 'THe Hunger Games',
-      author: 'Suzanne Collins',
-      category: 'Action',
-      completed: 64,
-      chapter: 'Chapter 17',
-    },
-    {
-      title: 'Dune',
-      author: 'Frank Herbert',
-      category: 'Science Fiction',
-      completed: 8,
-      chapter: 'Chapter 3: "A Lesson Learned"',
-    },
-    {
-      title: 'Capital in the Twenty-First Century',
-      author: 'Suzanne Collins',
-      category: 'Economy',
-      completed: 0,
-      chapter: 'Introduction',
-    },
-  ];
+  const Books = useSelector((Books) => Books.bookReducer);
 
   return (
     <>
       <ul>
-        {Books.map((book) => (
-          <li key={uuidv4()}>
-            <Book
-              title={book.title}
-              author={book.author}
-              completed={book.completed}
-              category={book.category}
-              chapter={book.chapter}
-            />
+        {Books.length !== 0 ? (
+          Books.map((book) => (
+            <li key={book.id}>
+              <Book
+                title={book.title}
+                author={book.author}
+                percentage={Math.floor(Math.random() * 100)}
+                id={book.id}
+              />
+            </li>
+          ))
+        ) : (
+          <li>
+            <h2>No Books Availabe!!</h2>
           </li>
-        ))}
+        )}
       </ul>
       <Form />
     </>

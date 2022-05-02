@@ -2,46 +2,56 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/books/book';
 
 const Book = ({
-  title, author, completed, chapter, category,
-}) => (
-  <section>
-    <div>
-      <p>{category}</p>
-      <h2>{title}</h2>
-      <p>{author}</p>
+  title, author, percentage, id,
+}) => {
+  const dispatch = useDispatch();
+
+  const handleRemove = () => {
+    dispatch(removeBook(id));
+  };
+
+  return (
+    <section>
+      <div>
+        <p>Action</p>
+        <h2>{title}</h2>
+        <p>{author}</p>
+
+        <div>
+          <button type="button">Comments</button>
+          <button type="button" onClick={handleRemove}>
+            Remove
+          </button>
+          <button type="button">Edit</button>
+        </div>
+      </div>
 
       <div>
-        <button type="button">Comments</button>
-        <button type="button">Remove</button>
-        <button type="button">Edit</button>
+        <CircularProgressbar value={percentage} text={`${percentage}%`} />
+        <div>
+          <p>{`${percentage}%`}</p>
+          <p>completed</p>
+        </div>
       </div>
-    </div>
 
-    <div>
-      <CircularProgressbar value={completed} text={`${completed}%`} />
-      <div>
-        <p>{`${completed}%`}</p>
-        <p>completed</p>
+      <div className="chapter-progress">
+        <p>CURRENT CHAPTER</p>
+        <p>chapter 20</p>
+        <button type="button">UPDATE PROGRESS</button>
       </div>
-    </div>
-
-    <div className="chapter-progress">
-      <p>CURRENT CHAPTER</p>
-      <p>{chapter}</p>
-      <button type="button">UPDATE PROGRESS</button>
-    </div>
-
-  </section>
-);
+    </section>
+  );
+};
 
 Book.propTypes = {
-  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  chapter: PropTypes.string.isRequired,
-  completed: PropTypes.number.isRequired,
+  percentage: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Book;
