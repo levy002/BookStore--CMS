@@ -7,7 +7,7 @@
 - CSS
 
 ## Live Demo
-Visit live demo (COMING SOON)
+Visit live demo [here](https://bookstore-cms-202.netlify.app/)
 
 ## installation
 

@@ -7,6 +7,7 @@ const Form = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ const Form = () => {
       id: uuidv4(),
       title,
       author,
+      category,
     };
 
     dispatch(addBook(newBook));
@@ -28,6 +30,10 @@ const Form = () => {
 
     if (e.target.id === 'book-author') {
       setAuthor(e.target.value);
+    }
+
+    if (e.target.id === 'book-category') {
+      setCategory(e.target.value);
     }
   };
 
@@ -53,6 +59,24 @@ const Form = () => {
           onChange={handleChange}
           required
         />
+
+        <select
+          id="book-category"
+          type="text"
+          placeholder="Book author"
+          name="category"
+          value={category}
+          onChange={handleChange}
+          required
+        >
+          <option value="" disabled>Category</option>
+          <option value="Sci-fi">Sci-fi</option>
+          <option value="Action">Action</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Programming">Programming</option>
+          <option value="Politics">Politics</option>
+        </select>
+
         <button type="submit">ADD BOOK</button>
       </form>
     </section>
