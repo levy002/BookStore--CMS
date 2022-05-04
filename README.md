@@ -1,10 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Bookstore CMS
 
+<img src="./src/image/screenshot (1).png" alt="App screen shoot">
+
 # Built with
 - React.js
 - Redux
-- CSS
+- Tailwind
 
 ## Live Demo
 Visit live demo [here](https://bookstore-cms-202.netlify.app/)
@@ -33,3 +35,7 @@ Contributions, issues, and feature requests are welcome!
 ## Show your support
 Give a :star:️ if you like this project!
 ## Acknowledgments
+
+- Microverse offered guidance on how to make the project more professional
+- [Zeplin](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f93780) design
+
