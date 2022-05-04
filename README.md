@@ -35,3 +35,7 @@ Contributions, issues, and feature requests are welcome!
 ## Show your support
 Give a :star:️ if you like this project!
 ## Acknowledgments
+
+- Microverse offered guidance on how to make the project more professional
+- Zeplin designs
+
