@@ -1,10 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Bookstore CMS
 
+<img src="./src/image/screenshot (1).png" alt="App screen shoot">
+
 # Built with
 - React.js
 - Redux
-- CSS
+- Tailwind
 
 ## Live Demo
 Visit live demo [here](https://bookstore-cms-202.netlify.app/)
