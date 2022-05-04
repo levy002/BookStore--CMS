@@ -14,10 +14,12 @@ root.render(
     <React.StrictMode>
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<BookList />} />
-          <Route path="/categories" element={<Categories />} />
-        </Routes>
+        <main className="bg-pale-grey p-12">
+          <Routes>
+            <Route path="/" element={<BookList />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
+        </main>
       </Router>
     </React.StrictMode>
   </Provider>,

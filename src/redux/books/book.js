@@ -52,6 +52,7 @@ export const removeBook = (id) => (dispatch) => {
     .then((res) => {
       if (res.status === 201) {
         dispatch(removeBookAction(id));
+        getBooks();
       }
     });
 };

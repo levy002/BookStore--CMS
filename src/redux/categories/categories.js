@@ -3,12 +3,12 @@ const initialState = '';
 
 export const statusCheck = () => ({ type: STATUS });
 
-const statusReducer = (status = initialState, action) => {
+const statusReducer = (state = initialState, action) => {
   if (action.type === STATUS) {
     return 'Under construction';
   }
 
-  return status;
+  return state;
 };
 
 export default statusReducer;

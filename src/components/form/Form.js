@@ -38,11 +38,12 @@ const Form = () => {
   };
 
   return (
-    <section>
-      <h3>ADD NEW BOOK</h3>
-      <form onSubmit={handleSubmit}>
+    <section className="flex flex-col gap-6 w-11/12 mx-auto">
+      <h3 className="font-montserrat font-bold text-warm-grey text-xl">ADD NEW BOOK</h3>
+      <form onSubmit={handleSubmit} className="flex justify-between">
         <input
           id="book-title"
+          className="border w-1/4 px-2 rounded bg-white text-pink-grey font-base font-montserrat font-normal leading-normal"
           type="text"
           placeholder="Book title"
           name="title"
@@ -52,6 +53,7 @@ const Form = () => {
         />
         <input
           id="book-author"
+          className="border w-1/4 px-2 rounded bg-white text-pink-grey font-base font-montserrat font-normal leading-normal"
           type="text"
           placeholder="Book author"
           name="author"
@@ -62,6 +64,7 @@ const Form = () => {
 
         <select
           id="book-category"
+          className="border w-1/4 px-2 rounded bg-white text-pinkish-grey font-base font-montserrat font-normal leading-normal"
           type="text"
           placeholder="Book author"
           name="category"
@@ -70,14 +73,14 @@ const Form = () => {
           required
         >
           <option value="" disabled>Category</option>
-          <option value="Sci-fi">Sci-fi</option>
-          <option value="Action">Action</option>
-          <option value="Mystery">Mystery</option>
-          <option value="Programming">Programming</option>
-          <option value="Politics">Politics</option>
+          <option value="Sci-fi" className="text-black-two">Sci-fi</option>
+          <option value="Action" className="text-black-two">Action</option>
+          <option value="Mystery" className="text-black-two">Mystery</option>
+          <option value="Programming" className="text-black-two">Programming</option>
+          <option value="Politics" className="text-black-two">Politics</option>
         </select>
 
-        <button type="submit">ADD BOOK</button>
+        <button type="submit" className="text-white text-center font-bold font-roboto font-sm leading-normal py-2 px-8 rounded bg-azure ">ADD BOOK</button>
       </form>
     </section>
   );
