@@ -37,5 +37,5 @@ Give a :star:️ if you like this project!
 ## Acknowledgments
 
 - Microverse offered guidance on how to make the project more professional
-- Zeplin designs
+- [Zeplin](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f93780) design
 
