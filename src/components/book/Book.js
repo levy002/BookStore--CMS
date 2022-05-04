@@ -91,7 +91,7 @@ const Book = () => {
         ))
       ) : (
         <>
-          <h2 className="border p-8">No Books Available</h2>
+          <h2 className="border p-8 text-center w-11/12 mx-auto bg-white">Please add more books!!</h2>
         </>
       )}
     </>
